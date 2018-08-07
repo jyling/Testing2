@@ -1,0 +1,85 @@
+body {
+  height: 10000px; }
+
+h1 {
+  font-family: Segoe UI Light;
+  color: white;
+  text-align: center; }
+
+.title h1:hover {
+  font: black; }
+
+.title {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  background: darkgrey;
+  width: 100%; }
+
+.title:hover {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  background: #008CBA; }
+
+.navi li {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  font-family: Segoe UI;
+  font-size: 28px;
+  -webkit-text-decoration: box;
+  text-decoration: box;
+  text-align: center;
+  list-style-type: none;
+  background: white;
+  padding: 2px 1px; }
+
+.navi a {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  display: block;
+  text-decoration: none; }
+
+.navi a:visited {
+  color: black; }
+
+.navi a:hover {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  color: white; }
+
+.navi li:hover {
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  background: #017fa8;
+  font: #FFF; }
+
+.navi a:hover {
+  font: white; }
+
+hr {
+  width: 75%; }
+
+body {
+  background-color: #555555; }
+
+@media only screen and (min-width: 700px) {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+  .navi li {
+    float: left;
+    background-color: white; }
+  .navi li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 5px;
+    text-decoration: none; } }
