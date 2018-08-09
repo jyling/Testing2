@@ -1,23 +1,19 @@
-body {
-  background-image: url("image/bg.png");
+html {
+  //background-image: url("image/bg.png");
+  font-family: Segoe UI , Helvetica;
+  background: lightblue;
+  background-size:100%;
   height: 10000px; 
   }
 
-h1 {
-  font-family: Segoe UI Light;
-  color: white;
-  text-align: center; }
 
 .separator  {
   margin-top: 20px;
   opacity: 0.5;
-  background-color: #eee;
   border-top: 3px solid white;
-  color: #eee; 
   -webkit-box-shadow: 2px 2px 4px #000000;
           box-shadow: 2px 2px 4px #000000;
 }
-
 .title {
   margin-top: 3%;
   -webkit-transition: 1s ease;
@@ -37,7 +33,7 @@ h1 {
   -webkit-transition: 1s ease;
   -o-transition: 1s ease;
   transition: 1s ease;
-  font-family: Segoe UI;
+
   font-size: 28px;
   -webkit-text-decoration: box;
   text-decoration: box;
@@ -47,8 +43,8 @@ h1 {
   padding: 7px 1px; }
 
 .search input[type=text], .search input[type=submit]{
+	font-family: Segoe UI Light;	
   margin-right: -8px;
-  margin-top: 10px;
   font-size: 28px;
   height: 100%;
   padding: 7px 1px;
@@ -108,15 +104,16 @@ h1 {
   font: white; }
 
 .topic h1 {
+	font-family: Segoe UI Light;	
   font-size: 48px;
   text-align: left;
   margin-left: 10px;
   padding: 12px 12px;
-
+  color: white;
 }
 
 .topic {
-  background: #008CBA;
+	background: #008CBA;
     -webkit-border-radius: 5px;
           border-radius: 5px;
   -webkit-box-shadow: 1px 2px 6px #000000;
@@ -125,9 +122,11 @@ h1 {
 
 
 body {
-  background-color: #555555; }
+  // background-color: #555555; 
+  }
 
-@media (min-width: 1120px) {
+@media (min-width: 1120px){
+
   .title {
     background-color: #00b2ed; }
   .title:hover {
@@ -150,9 +149,14 @@ body {
     margin-left: 5px;
     text-decoration: none; } }
 
-@media (max-width: 570px) {
+@media (max-width: 640px) {
 
 .search input[type=text], .search input[type=submit]{
+	-webkit-transition: 	850ms;
+	   -moz-transition: 	850ms;
+	    -ms-transition: 	850ms;
+	     -o-transition: 	850ms;
+	        transition: 	850ms;
   border-radius: 20px 20px 20px 20px;
 }
 
