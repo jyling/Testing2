@@ -1,22 +1,20 @@
 body {
   background-image: url("image/bg.png");
-  height: 10000px; 
-  }
+  height: 10000px; }
 
 h1 {
   font-family: Segoe UI Light;
   color: white;
   text-align: center; }
 
-.separator  {
+.separator {
   margin-top: 20px;
   opacity: 0.5;
   background-color: #eee;
   border-top: 3px solid white;
-  color: #eee; 
+  color: #eee;
   -webkit-box-shadow: 2px 2px 4px #000000;
-          box-shadow: 2px 2px 4px #000000;
-}
+  box-shadow: 2px 2px 4px #000000; }
 
 .title {
   margin-top: 3%;
@@ -26,9 +24,9 @@ h1 {
   background: #008CBA;
   width: 100%;
   -webkit-border-radius: 5px;
-  border-radius: 5px; 
+  border-radius: 5px;
   -webkit-box-shadow: 1px 2px 6px #000000;
-          box-shadow: 1px 2px 6px #000000;}
+  box-shadow: 1px 2px 6px #000000; }
 
 .navi li {
   margin-left: 5px;
@@ -46,7 +44,7 @@ h1 {
   background: #00b2ed;
   padding: 7px 1px; }
 
-.search input[type=text], .search input[type=submit]{
+.search input[type=text], .search input[type=submit] {
   margin-right: -8px;
   margin-top: 10px;
   font-size: 28px;
@@ -54,32 +52,29 @@ h1 {
   padding: 7px 1px;
   border-radius: 20px 0px 0px 20px;
   border-color: transparent;
-  text-indent: 10px;
-}
-.search{
+  text-indent: 10px; }
+
+.search {
   margin-right: 20px;
-  margin-left: 20px;
-}
+  margin-left: 20px; }
+
 .search input[type=submit] {
   margin-top: 6px;
-  background-color: #2386B4; 
+  background-color: #2386B4;
   border: none;
   padding: 9px 6px;
-  color:white;
+  color: white;
   border-radius: 0px 20px 20px 0px;
-  text-align: left ;
-  font-size: 28px;
-  
-}
+  text-align: left;
+  font-size: 28px; }
 
 .search input[type=submit]:hover {
   -webkit-transition: 500ms;
-     -moz-transition: 500ms;
-      -ms-transition: 500ms;
-       -o-transition: 500ms;
-          transition: 500ms;
-  background-color:#96CDE6
-}
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  background-color: #96CDE6; }
 
 .navi a {
   -webkit-transition: 1s ease;
@@ -111,18 +106,14 @@ h1 {
   font-size: 48px;
   text-align: left;
   margin-left: 10px;
-  padding: 12px 12px;
-
-}
+  padding: 12px 12px; }
 
 .topic {
   background: #008CBA;
-    -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 1px 2px 6px #000000;
-          box-shadow: 1px 2px 6px #000000;
-}
-
+  box-shadow: 1px 2px 6px #000000; }
 
 body {
   background-color: #555555; }
@@ -151,15 +142,9 @@ body {
     text-decoration: none; } }
 
 @media (max-width: 570px) {
-
-.search input[type=text], .search input[type=submit]{
-  border-radius: 20px 20px 20px 20px;
-}
-
-.search input[type=text] {
-  width: 100%;
-}
-.search input[type=submit] {
-  border-radius: 20px 20px 20px 20px;
-}
-}
+  .search input[type=text], .search input[type=submit] {
+    border-radius: 20px 20px 20px 20px; }
+  .search input[type=text] {
+    width: 100%; }
+  .search input[type=submit] {
+    border-radius: 20px 20px 20px 20px; } }
