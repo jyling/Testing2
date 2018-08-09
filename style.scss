@@ -1,6 +1,7 @@
 
 body{
 	height: 10000px;
+	// background-image: url("image/bg.png");
 }
 
 
@@ -13,9 +14,14 @@ h1
 	
 }
 
-
+hr {
+	background-color: #eee;
+    border-top: 50px solid white;
+    color: #eee;
+}
 
 .title {
+	margin-top: 3%;
 	transition: 1s ease;
 	// background: #00b2ed;
 	background: #008CBA;
