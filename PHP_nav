@@ -1,0 +1,98 @@
+<?php
+
+$brand = array(
+    'icon'  => 'test.svg',
+    'title' => 'Testing',
+    'link'  => 'homepage.php',
+);
+
+$nav = array(
+    'index.php'      => array(
+        'name' => 'Homepage',
+    ),
+    'test/about.php' => array(
+        'name' => 'About',
+    ),
+);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <title>Document</title>
+</head>
+
+
+<?php
+function Nav($brand = array(), $nav = array())
+{
+
+    $local = (isset($brand['link'])) ? $brand['link'] : 'index.php';
+    $head  = '
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    ';
+    $head_content = '<a class="navbar-brand" href="' . $local . '">';
+    $head_content .= (isset($brand['icon'])) ? '<img src="' . $brand['icon'] . '" width="30" height="30" class="d-inline-block align-top mx-1" alt="">' : "";
+    $head_content .= (isset($brand['title'])) ? $brand['title'] : '';
+    $head_content .= '
+    </a>
+    ';
+    $head_tail = '
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    ';
+
+    $head .= $head_content . $head_tail;
+    $content = "";
+    foreach ($nav as $key => $value) {
+        $selected = (basename($_SERVER['PHP_SELF']) == $key) ? "<span class='sr-only'>(current)</span>" : "";
+        $active   = (basename($_SERVER['PHP_SELF']) == $key) ? "active" : "";
+        $name     = (isset($value['name'])) ? $value['name'] : basename($_SERVER['PHP_SELF']);
+        if (isset($value['visible'])) {
+            continue;
+        }
+        $content .= "
+        <li class='nav-item $active'>
+            <a class='nav-link' href='$key'>$name $selected</a>
+        </li>
+        ";
+    }
+
+    $tail = "
+    </ul>
+        </div>
+    </nav>
+    ";
+    return $head . $content . $tail;
+
+}
+
+?>
+
+<body>
+<?php
+echo Nav($brand, $nav);
+?>
+</body>
+
+</html>
